@@ -4,65 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COLUSA BY JP CORP</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset básico */
+        *, *::before, *::after {
+            box-sizing: border-box;
             margin: 0;
-            background-color: #fdfcfb;
-            color: #333;
+            padding: 0;
         }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fffdfb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
         header {
             background-color: #4CAF50;
-            padding: 20px;
             color: white;
+            padding: 30px 20px;
             text-align: center;
         }
+
+        header img {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Navigation (opcional) */
+        nav {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content */
         main {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-        h1 {
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2, h3 {
             color: #4CAF50;
+            margin-bottom: 15px;
         }
+
+        ul {
+            list-style: disc inside;
+            margin-bottom: 20px;
+        }
+
+        /* Products grid */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Button */
         .btn-contact {
             display: inline-block;
-            padding: 12px 20px;
+            padding: 14px 28px;
             background-color: #4CAF50;
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            margin-top: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
+
+        .btn-contact:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer */
         footer {
-            text-align: center;
-            padding: 20px;
             background-color: #f2f2f2;
             color: #555;
+            text-align: center;
+            padding: 25px;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .btn-contact {
+                padding: 12px 20px;
+            }
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
+        <img src="https://via.placeholder.com/150x80.png?text=LOGO" alt="COLUSA BY JP CORP">
         <h1>COLUSA BY JP CORP</h1>
         <p>Acercando más a las personas con el campo</p>
+        <!-- Opcional: Navegación -->
+        <nav>
+            <a href="#sobre-nosotros">Sobre Nosotros</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
     </header>
-    <main>
-        <h2>Bienvenidos a nuestra empresa familiar</h2>
-        <p>En COLUSA BY JP CORP nos dedicamos a llevar productos del campo colombiano de alta calidad directamente a nuestros clientes. Nuestro objetivo es fortalecer la conexión entre las personas y el campo, promoviendo productos frescos y auténticos.</p>
-        
-        <h3>Nuestros productos</h3>
-        <ul>
-            <li>Sodas y bebidas latinas</li>
-            <li>Potato sticks y snacks</li>
-            <li>Obleas y productos tradicionales</li>
-        </ul>
 
-        <a href="https://wa.me/1234567890" class="btn-contact">Contáctanos por WhatsApp</a>
+    <!-- Main content -->
+    <main>
+
+        <!-- About Section -->
+        <section id="sobre-nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>COLUSA BY JP CORP es una empresa familiar dedicada a llevar productos del campo colombiano directamente a nuestros clientes. Nuestro objetivo es acercar a las personas al campo, promoviendo productos frescos, auténticos y de calidad.</p>
+        </section>
+
+        <!-- Products Section -->
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x150.png?text=Soda" alt="Sodas y bebidas latinas">
+                    <h3>Sodas y bebidas latinas</h3>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x150.png?text=Potato+Sticks" alt="Potato sticks y snacks">
+                    <h3>Potato sticks y snacks</h3>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x150.png?text=Obleas" alt="Obleas y productos tradicionales">
+                    <h3>Obleas y productos tradicionales</h3>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/200x150.png?text=Restaurantes" alt="Productos para restaurantes">
+                    <h3>Productos para restaurantes</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Estamos listos para atender tus pedidos y consultas. Contáctanos directamente por WhatsApp:</p>
+            <a href="https://wa.me/1234567890" class="btn-contact" target="_blank">Enviar WhatsApp</a>
+        </section>
+
     </main>
+
+    <!-- Footer -->
     <footer>
         &copy; 2026 COLUSA BY JP CORP | Todos los derechos reservados
     </footer>
+
 </body>
 </html>
