@@ -1,207 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLUSA BY JP CORP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset básico */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COLUSA BY JP CORP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fffdfb;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #fffdfb;
-            color: #333;
-            line-height: 1.6;
-        }
+    /* Header */
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
 
-        /* Header */
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
+    header img {
+      max-width: 150px;
+      margin-bottom: 15px;
+    }
 
-        header img {
-            max-width: 150px;
-            margin-bottom: 15px;
-        }
+    header h1 {
+      font-size: 2.5rem;
+    }
 
-        header h1 {
-            font-size: 2.4rem;
-        }
+    header p {
+      font-size: 1.2rem;
+    }
 
-        header p {
-            font-size: 1.2rem;
-        }
+    nav {
+      text-align: center;
+      margin-top: 15px;
+    }
 
-        /* Navigation (opcional) */
-        nav {
-            text-align: center;
-            margin-top: 15px;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-        /* Main content */
-        main {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+    section {
+      margin-bottom: 60px;
+    }
 
-        section {
-            margin-bottom: 50px;
-        }
+    h2, h3 {
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
 
-        h2, h3 {
-            color: #4CAF50;
-            margin-bottom: 15px;
-        }
+    p {
+      margin-bottom: 20px;
+    }
 
-        ul {
-            list-style: disc inside;
-            margin-bottom: 20px;
-        }
+    ul {
+      list-style: disc inside;
+      margin-bottom: 20px;
+    }
 
-        /* Products grid */
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
+    /* Products / Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-        .product-card {
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
 
-        .product-card:hover {
-            transform: scale(1.05);
-        }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
 
-        .product-card img {
-            max-width: 100%;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
 
-        /* Button */
-        .btn-contact {
-            display: inline-block;
-            padding: 14px 28px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
+    .gallery-item h3 {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      margin: 0;
+      padding: 5px 10px;
+      background-color: rgba(0,0,0,0.6);
+      color: white;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
 
-        .btn-contact:hover {
-            background-color: #45a049;
-        }
+    /* Button */
+    .btn-contact {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
 
-        /* Footer */
-        footer {
-            background-color: #f2f2f2;
-            color: #555;
-            text-align: center;
-            padding: 25px;
-        }
+    .btn-contact:hover {
+      background-color: #45a049;
+    }
 
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
+    /* Footer */
+    footer {
+      background-color: #f2f2f2;
+      color: #555;
+      text-align: center;
+      padding: 25px;
+    }
 
-            .btn-contact {
-                padding: 12px 20px;
-            }
-        }
-
-    </style>
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .btn-contact {
+        padding: 12px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <img src="https://via.placeholder.com/150x80.png?text=LOGO" alt="COLUSA BY JP CORP">
-        <h1>COLUSA BY JP CORP</h1>
-        <p>Acercando más a las personas con el campo</p>
-        <!-- Opcional: Navegación -->
-        <nav>
-            <a href="#sobre-nosotros">Sobre Nosotros</a>
-            <a href="#productos">Productos</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <img src="https://via.placeholder.com/150x80.png?text=LOGO" alt="COLUSA BY JP CORP">
+    <h1>COLUSA BY JP CORP</h1>
+    <p>Acercando más a las personas con el campo</p>
+    <nav>
+      <a href="#sobre-nosotros">Sobre Nosotros</a>
+      <a href="#productos">Productos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-    <!-- Main content -->
-    <main>
+  <!-- Main -->
+  <main>
 
-        <!-- About Section -->
-        <section id="sobre-nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>COLUSA BY JP CORP es una empresa familiar dedicada a llevar productos del campo colombiano directamente a nuestros clientes. Nuestro objetivo es acercar a las personas al campo, promoviendo productos frescos, auténticos y de calidad.</p>
-        </section>
+    <!-- About -->
+    <section id="sobre-nosotros">
+      <h2>Sobre Nosotros</h2>
+      <p>COLUSA BY JP CORP es una empresa familiar dedicada a llevar productos del campo colombiano directamente a nuestros clientes. Nuestro objetivo es acercar a las personas al campo, promoviendo productos frescos, auténticos y de calidad.</p>
+    </section>
 
-        <!-- Products Section -->
-        <section id="productos">
-            <h2>Nuestros Productos</h2>
-            <div class="products">
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x150.png?text=Soda" alt="Sodas y bebidas latinas">
-                    <h3>Sodas y bebidas latinas</h3>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x150.png?text=Potato+Sticks" alt="Potato sticks y snacks">
-                    <h3>Potato sticks y snacks</h3>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x150.png?text=Obleas" alt="Obleas y productos tradicionales">
-                    <h3>Obleas y productos tradicionales</h3>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/200x150.png?text=Restaurantes" alt="Productos para restaurantes">
-                    <h3>Productos para restaurantes</h3>
-                </div>
-            </div>
-        </section>
+    <!-- Products -->
+    <section id="productos">
+      <h2>Nuestros Productos</h2>
+      <ul>
+        <li>Sodas y bebidas latinas</li>
+        <li>Potato sticks y snacks</li>
+        <li>Obleas y productos tradicionales</li>
+        <li>Productos para restaurantes y negocios de comida rápida</li>
+      </ul>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Estamos listos para atender tus pedidos y consultas. Contáctanos directamente por WhatsApp:</p>
-            <a href="https://wa.me/1234567890" class="btn-contact" target="_blank">Enviar WhatsApp</a>
-        </section>
+    <!-- Gallery -->
+    <section id="galeria">
+      <h2>Galería de Productos</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="https://via.placeholder.com/300x200.png?text=Soda" alt="Sodas y bebidas">
+          <h3>Sodas y bebidas latinas</h3>
+        </div>
+        <div class="gallery-item">
+          <img src="https://via.placeholder.com/300x200.png?text=Potato+Sticks" alt="Potato Sticks">
+          <h3>Potato sticks y snacks</h3>
+        </div>
+        <div class="gallery-item">
+          <img src="https://via.placeholder.com/300x200.png?text=Obleas" alt="Obleas">
+          <h3>Obleas y productos tradicionales</h3>
+        </div>
+        <div class="gallery-item">
+          <img src="https://via.placeholder.com/300x200.png?text=Restaurantes" alt="Productos para restaurantes">
+          <h3>Productos para restaurantes</h3>
+        </div>
+      </div>
+    </section>
 
-    </main>
+    <!-- Contact -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Estamos listos para atender tus pedidos y consultas. Contáctanos directamente por WhatsApp:</p>
+      <a href="https://wa.me/1234567890" class="btn-contact" target="_blank">Enviar WhatsApp</a>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2026 COLUSA BY JP CORP | Todos los derechos reservados
-    </footer>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 COLUSA BY JP CORP | Todos los derechos reservados
+  </footer>
 
 </body>
 </html>
