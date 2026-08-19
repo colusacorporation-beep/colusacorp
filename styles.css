@@ -118,3 +118,54 @@ footer{background:#030303;color:#fff;padding:54px 0 20px}
 
 .brand-pill.image-logo{padding:10px 16px}
 .brand-pill.image-logo img{max-width:100%;max-height:54px;object-fit:contain;display:block}
+
+
+/* V6 - Brands We Distribute */
+.brands{padding:68px 0 76px;background:#fff}
+.brands-intro{text-align:center;max-width:760px;margin:0 auto 38px}
+.brands-intro h2{font-size:clamp(2rem,4vw,3.2rem);margin:4px 0 10px}
+.brands-intro p:last-child{color:var(--muted);line-height:1.7;margin:0}
+.brand-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+}
+.brand-logo-card{
+  min-height:128px;
+  padding:18px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  border:1px solid #ece7dd;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,.045);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.brand-logo-card:hover{
+  transform:translateY(-3px);
+  border-color:#d8b455;
+  box-shadow:0 16px 34px rgba(0,0,0,.08);
+}
+.brand-logo-card img{
+  display:block;
+  max-width:100%;
+  max-height:82px;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+}
+.brand-logo-card.featured-brand{
+  border-color:rgba(199,154,45,.55);
+  background:linear-gradient(180deg,#fffdf8,#fff);
+}
+.brand-logo-card.featured-brand img{max-height:92px}
+
+@media(max-width:900px){
+  .brand-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:640px){
+  .brand-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .brand-logo-card{min-height:110px;padding:14px}
+  .brand-logo-card img{max-height:70px}
+}
