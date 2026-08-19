@@ -1,223 +1,226 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COLUSA BY JP CORP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #fffdfb;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* Header */
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    header img {
-      max-width: 150px;
-      margin-bottom: 15px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-    }
-
-    nav {
-      text-align: center;
-      margin-top: 15px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    h2, h3 {
-      color: #4CAF50;
-      margin-bottom: 20px;
-    }
-
-    p {
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style: disc inside;
-      margin-bottom: 20px;
-    }
-
-    /* Products / Gallery Grid */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      display: block;
-      border-radius: 10px;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.05);
-    }
-
-    .gallery-item h3 {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      margin: 0;
-      padding: 5px 10px;
-      background-color: rgba(0,0,0,0.6);
-      color: white;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-
-    /* Button */
-    .btn-contact {
-      display: inline-block;
-      padding: 14px 28px;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .btn-contact:hover {
-      background-color: #45a049;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #f2f2f2;
-      color: #555;
-      text-align: center;
-      padding: 25px;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      .btn-contact {
-        padding: 12px 20px;
-      }
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="COLUSA BY JP CORP — Latin Food Imports & Distribution in the U.S." />
+  <title>COLUSA BY JP CORP | Latin Food Imports & Distribution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="COLUSA home">
+        <img src="colusa-logo.jpg" alt="COLUSA BY JP CORP logo" />
+      </a>
 
-  <!-- Header -->
-  <header>
-    <img src="https://via.placeholder.com/150x80.png?text=LOGO" alt="COLUSA BY JP CORP">
-    <h1>COLUSA BY JP CORP</h1>
-    <p>Acercando más a las personas con el campo</p>
-    <nav>
-      <a href="#sobre-nosotros">Sobre Nosotros</a>
-      <a href="#productos">Productos</a>
-      <a href="#galeria">Galería</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#brands">Brands</a>
+        <a href="#distribution">Distribution</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn-outline nav-cta" href="#contact">Wholesale Inquiry</a>
+    </div>
   </header>
 
-  <!-- Main -->
   <main>
-
-    <!-- About -->
-    <section id="sobre-nosotros">
-      <h2>Sobre Nosotros</h2>
-      <p>COLUSA BY JP CORP es una empresa familiar dedicada a llevar productos del campo colombiano directamente a nuestros clientes. Nuestro objetivo es acercar a las personas al campo, promoviendo productos frescos, auténticos y de calidad.</p>
-    </section>
-
-    <!-- Products -->
-    <section id="productos">
-      <h2>Nuestros Productos</h2>
-      <ul>
-        <li>Sodas y bebidas latinas</li>
-        <li>Potato sticks y snacks</li>
-        <li>Obleas y productos tradicionales</li>
-        <li>Productos para restaurantes y negocios de comida rápida</li>
-      </ul>
-    </section>
-
-    <!-- Gallery -->
-    <section id="galeria">
-      <h2>Galería de Productos</h2>
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="https://via.placeholder.com/300x200.png?text=Soda" alt="Sodas y bebidas">
-          <h3>Sodas y bebidas latinas</h3>
-        </div>
-        <div class="gallery-item">
-          <img src="https://via.placeholder.com/300x200.png?text=Potato+Sticks" alt="Potato Sticks">
-          <h3>Potato sticks y snacks</h3>
-        </div>
-        <div class="gallery-item">
-          <img src="https://via.placeholder.com/300x200.png?text=Obleas" alt="Obleas">
-          <h3>Obleas y productos tradicionales</h3>
-        </div>
-        <div class="gallery-item">
-          <img src="https://via.placeholder.com/300x200.png?text=Restaurantes" alt="Productos para restaurantes">
-          <h3>Productos para restaurantes</h3>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="eyebrow">COLUSA BY JP CORP</div>
+        <h1>Latin Food Imports<br>&amp; Distribution</h1>
+        <p>Connecting Latin American products with the U.S. market through reliable import, wholesale and distribution solutions.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#products">View Products</a>
+          <a class="btn btn-darkglass" href="#contact">Become a Customer</a>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Estamos listos para atender tus pedidos y consultas. Contáctanos directamente por WhatsApp:</p>
-      <a href="https://wa.me/1234567890" class="btn-contact" target="_blank">Enviar WhatsApp</a>
+    <section class="brands section" id="brands">
+      <div class="container">
+        <div class="section-heading compact">
+          <span></span><h2>Brands We Work With</h2><span></span>
+        </div>
+        <div class="brand-row">
+          <div class="brand-pill image-logo"><img src="logo-trululu.webp" alt="Trululu logo"></div>
+          <div class="brand-pill image-logo"><img src="logo-postobon.webp" alt="Postobón logo"></div>
+          <div class="brand-pill colombina">Colombina</div>
+          <div class="brand-pill funky">FUNKY STREET</div>
+          <div class="brand-pill image-logo"><img src="logo-laconstancia.webp" alt="La Constancia logo"></div>
+          <div class="brand-pill jet">Jet</div>
+        </div>
+      </div>
     </section>
 
+    <section class="section soft" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow dark">Wholesale Portfolio</p>
+          <h2>Our Product Categories</h2>
+          <p>Built for supermarkets, restaurants, distributors and foodservice operators.</p>
+        </div>
+
+        <div class="category-grid">
+          <article class="category-card"><div class="cat-icon">🥔</div><h3>Snacks</h3><p>Potato snacks, chips and Latin favorites.</p></article>
+          <article class="category-card"><div class="cat-icon">🥤</div><h3>Beverages</h3><p>Soft drinks, malts and traditional beverages.</p></article>
+          <article class="category-card"><div class="cat-icon">🍬</div><h3>Candies</h3><p>Gummies, chocolate and confectionery.</p></article>
+          <article class="category-card"><div class="cat-icon">🛒</div><h3>Pantry Products</h3><p>Sauces, wafers, panela and everyday staples.</p></article>
+          <article class="category-card"><div class="cat-icon">🍽️</div><h3>Foodservice</h3><p>Industrial formats for restaurants and kitchens.</p></article>
+          <article class="category-card"><div class="cat-icon">★</div><h3>Private Label</h3><p>Brand development and sourcing opportunities.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split-section" id="about">
+      <div class="container split">
+        <div class="photo-card logistics-photo" role="img" aria-label="COLUSA logistics and product distribution"></div>
+        <div class="copy-block">
+          <p class="eyebrow dark">About COLUSA</p>
+          <h2>Built to Move Latin Products Forward</h2>
+          <p>COLUSA BY JP CORP is a U.S.-based importer and distributor focused on Latin American food and beverage products. We connect trusted suppliers with businesses across the U.S. market.</p>
+          <p>Our approach combines sourcing, import coordination, warehousing and wholesale distribution with a strong focus on service and long-term customer relationships.</p>
+          <a class="text-link" href="#contact">Talk to our team →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section distribution" id="distribution">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow dark">How We Work</p>
+          <h2>Our Distribution Process</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-step"><div class="step-number">01</div><h3>Latin America</h3><p>Sourcing from established suppliers and brands.</p></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step"><div class="step-number">02</div><h3>Import</h3><p>Coordinated logistics and import preparation.</p></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step"><div class="step-number">03</div><h3>Florida</h3><p>Receiving and inventory handling in South Florida.</p></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step"><div class="step-number">04</div><h3>Distribution</h3><p>Wholesale service for qualified business customers.</p></div>
+          <div class="process-arrow">→</div>
+          <div class="process-step"><div class="step-number">05</div><h3>Retail &amp; Foodservice</h3><p>Products delivered to the businesses that serve consumers.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section featured">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow dark">Selected Items</p>
+          <h2>Featured Products</h2>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-art pink">TRULULU</div>
+            <h3>Trululu Gummies</h3>
+            <p>Imported confectionery</p>
+            <a href="#contact">Request Wholesale Pricing</a>
+          </article>
+          <article class="product-card">
+            <div class="product-art magenta">POSTOBÓN</div>
+            <h3>Postobón Beverages</h3>
+            <p>Selected beverage formats</p>
+            <a href="#contact">Request Wholesale Pricing</a>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img src="funky-potato-sticks.png" alt="Funky Street Papas Cabello de Ángel Potato Sticks 500 g"></div>
+            <h3>Funky Street Potato Sticks</h3>
+            <p>Papas Cabello de Ángel · 500 g</p>
+            <a href="#contact">Request Wholesale Pricing</a>
+          </article>
+          <article class="product-card">
+            <div class="product-image-wrap"><img src="funky-obleas.png" alt="Funky Colombian wafers"></div>
+            <h3>Funky Colombian Wafers</h3>
+            <p>Traditional Colombian wafers · 16 g</p>
+            <a href="#contact">Request Wholesale Pricing</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="funky-feature">
+      <div class="container funky-wrap">
+        <div>
+          <p class="eyebrow gold">Our Own Brand</p>
+          <h2>FUNKY STREET</h2>
+          <p>Bold Latin-inspired snacks developed for modern retail and foodservice.</p>
+          <a class="btn btn-gold" href="#contact">Explore Funky Street</a>
+        </div>
+        <div class="funky-showcase">
+          <img src="funky-potato-sticks.png" alt="Funky Street Potato Sticks">
+          <img src="funky-sauces.png" alt="Funky Street Sauces">
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container cta-grid">
+        <div>
+          <p class="eyebrow gold">Wholesale &amp; Distribution</p>
+          <h2>Looking for Latin products for your business?</h2>
+          <p>Tell us what you need and our sales team can help you with product availability, case packs and wholesale opportunities.</p>
+          <div class="contact-direct">
+            <a href="tel:+17869221034">Call: +1 786 922 1034</a>
+            <a href="mailto:colusacorporation@gmail.com">Email: colusacorporation@gmail.com</a>
+            <a href="https://wa.me/17869221034" target="_blank" rel="noopener">WhatsApp Sales</a>
+          </div>
+        </div>
+        <form class="lead-form" onsubmit="return false;">
+          <input type="text" placeholder="Business name" aria-label="Business name">
+          <input type="email" placeholder="Email" aria-label="Email">
+          <input type="tel" placeholder="Phone" aria-label="Phone">
+          <textarea placeholder="What products are you interested in?" aria-label="Message"></textarea>
+          <button class="btn btn-gold" type="submit">Contact Our Sales Team</button>
+          <small>Form layout ready for your preferred email/form service.</small>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    &copy; 2026 COLUSA BY JP CORP | Todos los derechos reservados
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="colusa-logo.jpg" alt="COLUSA BY JP CORP">
+        <p>2900 NW 112TH AVE, DORAL, FL 33172</p>
+        <p>Latin Food Imports &amp; Distribution</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#products">Products</a>
+        <a href="#brands">Brands</a>
+        <a href="#distribution">Distribution</a>
+        <a href="#about">About Us</a>
+      </div>
+      <div>
+        <h4>Business</h4>
+        <a href="#contact">Wholesale Inquiry</a>
+        <a href="#contact">Become a Customer</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Stay Connected</h4>
+        <a href="tel:+17869221034">+1 786 922 1034</a>
+        <a href="mailto:colusacorporation@gmail.com">colusacorporation@gmail.com</a>
+        <a href="https://wa.me/17869221034" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://instagram.com/colusacorp" target="_blank" rel="noopener">@colusacorp</a>
+        <a href="https://facebook.com/colusacorp" target="_blank" rel="noopener">Facebook: colusacorp</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 COLUSA BY JP CORP. All rights reserved.</div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
